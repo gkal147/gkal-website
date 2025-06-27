@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Gleb</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+      color: #111;
+      line-height: 1.7;
+      min-height: 100%;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 16px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 640px;
+      width: 100%;
+      background: #ffffff;
+      padding: 40px 28px;
+      border-radius: 10px;
+      box-shadow:
+        inset 0 1px 0 #fff,
+        inset 0 -1px 3px rgba(0, 0, 0, 0.05),
+        0 8px 24px rgba(0, 0, 0, 0.04);
+      border: 1px solid #ddd;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1em;
+      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #ddd;
+      user-select: none;
+    }
+
+    nav {
+      margin-bottom: 2em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+      text-shadow: 0.5px 0.5px 0 #fff;
+    }
+
+    nav a:hover {
+      border-color: #111;
+    }
+
+    .post {
+      margin-bottom: 2em;
+      padding: 20px 24px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 2px 6px rgba(0, 0, 0, 0.03);
+      border: 1px solid #ddd;
+      transition: background 0.3s;
+    }
+
+    .post:hover {
+      background: #f1f1f1;
+    }
+
+    .post h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.3em;
+    }
+
+    .post h2 a {
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .post h2 a:hover {
+      border-color: #111;
+    }
+
+    .post time {
+      font-size: 0.9rem;
+      color: #888;
+      user-select: none;
+    }
+
+    .post p {
+      margin-top: 0.6em;
+    }
+
+    footer {
+      margin-top: 4em;
+      font-size: 0.9rem;
+      color: #777;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="https://gkal.me/">← Back to home</a>
+    </nav>
+
+    <h1>Blog</h1>
+
+    <section>
+      <div class="post">
+        <h2><a href="posts/do-you-trust-ai.html/">Do you trust AI?</a></h2>
+        <time datetime="2025-06-27">June 27, 2025</time>
+        <p>
+           More and more often, when I have some question, I hear the answer: “Just ask the chat.” 
+        </p>
+      </div>
+
+      <div class="post">
+        <h2><a href="#">Why I Moved From Frameworks to Pure HTML</a></h2>
+        <time datetime="2025-05-10">May 10, 2025</time>
+        <p>
+          React, Vue, Svelte — all powerful tools, but sometimes overkill. Here’s why I now often build sites in the spirit of the ’90s.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p style="margin: 0;">
+        <a href="https://unlicense.org/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; margin-right: 1px;">Uncopyrighted</a> by Gleb.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
+
