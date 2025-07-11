@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My self-hosted setup using Runtipi</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
+  <link rel="icon" href="https://gkal.me/favicon.png" type="image/png" />
+  <style>
+    :root {
+      font-family: 'IBM Plex Sans', sans-serif;
+      background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+      color: #111;
+      line-height: 1.7;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f8f8f8, #eaeaea);
+    }
+
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #111;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 40px 28px;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow:
+        inset 0 1px 0 #fff,
+        inset 0 -1px 3px rgba(0, 0, 0, 0.05),
+        0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    nav {
+      margin-bottom: 2em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+      text-shadow: 0.5px 0.5px 0 #fff;
+    }
+
+    nav a:hover {
+      border-color: #111;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.2em;
+      text-shadow: 1px 1px 0 #fff, -1px -1px 0 #ddd;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    time {
+      font-size: 0.9rem;
+      color: #888;
+      display: block;
+      margin-bottom: 2em;
+      user-select: none;
+    }
+
+    p {
+      margin-bottom: 1.4em;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 12px 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    footer {
+      margin-top: 4em;
+      font-size: 0.9rem;
+      color: #777;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="https://gkal.me/blog">← Back to blog</a>
+    </nav>
+
+    <article>
+      <h1>My self-hosted setup using Runtipi</h1>
+      <time datetime="2025-07-11">July 11, 2025</time>
+
+      <p>
+        Recently, I became interested in self-hosted alternatives to some of the services I use. This came from privacy concerns and the desire to back up all my data and files in one place — while having full access and control over both the server and the data.
+      </p>
+
+      <p>
+        So, I decided to set up my own self-hosted server.
+      </p>
+
+      <p>
+        I chose <strong>Runtipi</strong> for this. It’s an open-source platform that makes it easy to manage self-hosted apps and services. You can install apps from its built-in store, configure them, and run everything on your server. The setup is simple — you just run one command:
+      </p>
+
+      <pre><code>curl -L https://setup.runtipi.io | bash</code></pre>
+
+      <h3>The Machine</h3>
+      <p>
+        I used an old laptop: a Dell Latitude E6330 with an Intel i5-3320M CPU, 8GB of RAM, and a 1TB hard drive. That’s plenty for my needs. I connected it to the router via LAN and placed it nearby. For the OS, I chose Ubuntu Server 24.04 — no GUI, minimal resource usage, and everything I need.
+      </p>
+
+      <h3>Jellyfin</h3>
+      <p>
+        To host and stream movies and shows, I use <strong>Jellyfin</strong>. It’s a free and open-source media system with a clean interface and a great Android app. I can easily stream my content to all devices.
+      </p>
+
+      <h3>Immich</h3>
+      <p>
+        For photo backup and organization, I went with <strong>Immich</strong>. I used to have all my photos scattered across devices without order or backup. Now, they’re sorted into albums by year and automatically backed up to my server.
+      </p>
+
+      <h3>What I Still Plan to Set Up</h3>
+      <ul>
+        <li><strong>File server:</strong> Currently I just keep backups in folders on the disk. It works, but I may install Nextcloud later for better file management.</li>
+        <li><strong>eBook server:</strong> I read a lot on my Kindle, and storing all books directly on it isn’t ideal. Hosting my own Calibre server sounds like a good idea.</li>
+      </ul>
+
+      <h3>Security</h3>
+      <p>
+        Each app has its own login system, but I didn’t want to open ports and expose my server to the whole internet. So I made it accessible only within my local network. To access it remotely, I set up an <strong>OpenVPN server</strong> on my router. This way, I can securely connect to my home network and access everything as if I were at home.
+      </p>
+
+      <h3>Conclusion</h3>
+      <p>
+        Overall, this self-hosted setup has been a fun and educational experience. I’ve learned a lot, and I plan to keep expanding my server with more apps and features. There’s a whole world of open-source self-hosted tools out there — and I’m just getting started.
+      </p>
+    </article>
+
+    <footer>
+      <p style="margin: 0;">
+        <a href="https://unlicense.org/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">Uncopyrighted</a> by Gleb.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
+
